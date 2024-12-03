@@ -1,0 +1,3 @@
+test/stg-env/credentials.json
+test/prod-env/credentials.json
+/node_modules

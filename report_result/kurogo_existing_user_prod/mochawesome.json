@@ -1,0 +1,198 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 1,
+    "failures": 0,
+    "start": "2024-12-03T17:24:07.125Z",
+    "end": "2024-12-03T17:26:06.396Z",
+    "duration": 119271,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 25,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "31b5b890-6979-4265-8a63-d41ba5d258de",
+      "title": "",
+      "fullFile": "C:\\Users\\deast\\Work\\Upbond\\upbond_DJ\\e2e_mimaruu\\test\\prod-env\\kurogo_existing_user.js",
+      "file": "\\kurogo_existing_user.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aa134791-0c96-4bda-8bab-ff19dd6480b4",
+          "title": "E2E UPBOND Mimaru Kurogo PROD",
+          "fullFile": "C:\\Users\\deast\\Work\\Upbond\\upbond_DJ\\e2e_mimaruu\\test\\prod-env\\kurogo_existing_user.js",
+          "file": "\\kurogo_existing_user.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"E2E UPBOND Mimaru Kurogo PROD\"",
+              "fullTitle": "E2E UPBOND Mimaru Kurogo PROD \"before all\" hook in \"E2E UPBOND Mimaru Kurogo PROD\"",
+              "timedOut": false,
+              "duration": 873,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await createDriver();",
+              "err": {},
+              "uuid": "fa301a93-6537-48ae-9324-ae19cb10809e",
+              "parentUUID": "aa134791-0c96-4bda-8bab-ff19dd6480b4",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"E2E UPBOND Mimaru Kurogo PROD\"",
+              "fullTitle": "E2E UPBOND Mimaru Kurogo PROD \"after all\" hook in \"E2E UPBOND Mimaru Kurogo PROD\"",
+              "timedOut": false,
+              "duration": 42,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "ea0b3de4-5c4f-4227-9621-73a2a71cbb92",
+              "parentUUID": "aa134791-0c96-4bda-8bab-ff19dd6480b4",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "01. Login Existing User LINE",
+              "fullTitle": "E2E UPBOND Mimaru Kurogo PROD 01. Login Existing User LINE",
+              "timedOut": false,
+              "duration": 29540,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const chai = await import('chai');\nchai.should();\nlet driver = await createDriver();\nawait driver.get('https://main.d3sllht4la3b94.amplifyapp.com/luggage-delivery/nft/en');\nawait driver.manage().window().maximize();\nawait driver.sleep(10000);\nawait driver.findElement(By.xpath('//span[@class=\"btn-social__text new-style-button-text\" and contains(text(),\" LINE アカウント\")]')).click();\nawait driver.sleep(500);\nawait driver.wait(until.elementLocated(By.xpath('//div/input[@type=\"text\" and @placeholder=\"Email address\"]')), 500);\nawait driver.findElement(By.xpath('//div/input[@type=\"text\" and @placeholder=\"Email address\"]')).sendKeys(credentials.USRLINE);\nawait driver.sleep(500);\nawait driver.findElement(By.xpath(\"//input[@name='tpasswd']\")).sendKeys(credentials.PWDLINE);\nawait driver.sleep(500);\nawait driver.findElement(By.xpath('//button[text()=\"Log in\"]')).click();\nawait driver.sleep(8000);\nawait driver.wait(until.elementLocated(By.xpath('//span[text()=\"Stablecoin Balance\"]')), 8000);\nawait driver.sleep(500);\nawait driver.quit();",
+              "err": {},
+              "uuid": "d70f73dc-fcf1-4c1f-87b0-6d8f96b4f109",
+              "parentUUID": "aa134791-0c96-4bda-8bab-ff19dd6480b4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "02. Login Existing User Facebook",
+              "fullTitle": "E2E UPBOND Mimaru Kurogo PROD 02. Login Existing User Facebook",
+              "timedOut": false,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "2c8822cd-d787-4cfa-937d-60c67e6e527d",
+              "parentUUID": "aa134791-0c96-4bda-8bab-ff19dd6480b4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "03. Login Existing User Google",
+              "fullTitle": "E2E UPBOND Mimaru Kurogo PROD 03. Login Existing User Google",
+              "timedOut": false,
+              "duration": 34018,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const chai = await import('chai');\nchai.should();\nlet driver = await createDriver();\nawait driver.get('https://main.d3sllht4la3b94.amplifyapp.com/luggage-delivery/nft/en');\nawait driver.manage().window().maximize();\n    \n// Login using Google\nawait driver.findElement(By.xpath('//span[text()=\" Google でログイン\"]')).click();\nawait driver.findElement(By.xpath('//input[@type=\"email\" and @name=\"identifier\"]')).sendKeys(credentials.USRGOOGLE);\nawait driver.sleep(1000);\nawait driver.findElement(By.xpath('//span[text()=\"Next\"]')).click();\nawait driver.sleep(5000);\nawait driver.wait(until.elementLocated(By.xpath('//input[@type=\"password\" and @name=\"Passwd\"]')), 5000);\nawait driver.findElement(By.xpath('//input[@type=\"password\" and @name=\"Passwd\"]')).sendKeys(credentials.PWDGOOGLE);\nawait driver.sleep(1000);\nawait driver.findElement(By.xpath('//span[text()=\"Next\"]')).click();\nawait driver.sleep(20000);\nawait driver.wait(until.elementLocated(By.xpath('//span[text()=\"Stablecoin Balance\"]')), 8000);\nawait driver.sleep(500);\nawait driver.quit();",
+              "err": {},
+              "uuid": "6ff69017-23f5-42ac-af6b-6a2608e50223",
+              "parentUUID": "aa134791-0c96-4bda-8bab-ff19dd6480b4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "04. Login Existing User OTP",
+              "fullTitle": "E2E UPBOND Mimaru Kurogo PROD 04. Login Existing User OTP",
+              "timedOut": false,
+              "duration": 54791,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const chai = await import('chai');\nchai.should();\nlet driver = await createDriver();\nawait driver.get('https://main.d3sllht4la3b94.amplifyapp.com/luggage-delivery/nft/en');\nawait driver.manage().window().maximize();\n    \n// Login using OTP Email\nawait driver.findElement(By.xpath('//span[@id=\"otp-btn\" and contains(text(),\"メールアドレスでログイン\")]')).click();\nawait driver.wait(until.elementLocated(By.xpath('//input[@type=\"text\" and @id=\"otp-email\"]')), 5000);\nawait driver.findElement(By.xpath('//input[@type=\"text\" and @id=\"otp-email\"]')).sendKeys(credentials.USROTP);\nawait driver.findElement(By.xpath('//button[@type=\"submit\" and @id=\"otp-button\"]')).click();\nawait driver.sleep(3000);\n// Switch new tab to get OTP code\nlet current_window = await driver.getWindowHandle();\nawait driver.switchTo().newWindow('tab');\nlet windows = await driver.getAllWindowHandles();\nlet tab;\nwindows.forEach(async handle =>{\n    if (handle!=current_window){\n        tab = handle;\n    }\n});\nawait driver.get('https://mail.google.com/');\nawait driver.manage().window().maximize();\nawait driver.findElement(By.xpath('//input[@type=\"email\" and @name=\"identifier\"]')).sendKeys(credentials.USRGOOGLE);\nawait driver.sleep(1000);\nawait driver.findElement(By.xpath('//span[text()=\"Next\"]')).click();\nawait driver.sleep(2500);\nawait driver.wait(until.elementLocated(By.xpath('//input[@type=\"password\" and @name=\"Passwd\"]')), 1000);\nawait driver.findElement(By.xpath('//input[@type=\"password\" and @name=\"Passwd\"]')).sendKeys(credentials.PWDGOOGLE);\nawait driver.sleep(1000);\nawait driver.findElement(By.xpath('//span[text()=\"Next\"]')).click();\nawait driver.sleep(5000);\nawait driver.wait(until.elementLocated(By.xpath('(//a[@title=\"Gmail\" and @href=\"#inbox\"])[2]')), 5000);\nlet topEmail = await driver.wait(until.elementLocated(By.css('tr.zA.zE')), 3000);\nawait topEmail.click();\nlet otpElement = await driver.findElement(By.xpath('(//p)[3]'));\nlet otpCode = await otpElement.getText();\n    \n// Back to login 3.0 page\nawait driver.getAllWindowHandles();\nawait driver.switchTo().window(current_window);\nfor (let i = 0; i < otpCode.length; i++) {\n    let inputElement = await driver.wait(until.elementLocated(By.id(`handleInput${i + 1}`)), 3000);\n    await inputElement.sendKeys(otpCode[i]);\n    await driver.sleep(1000);\n};\nawait driver.sleep(1000);\nawait driver.findElement(By.xpath('//button[@type=\"submit\"]')).click();\nawait driver.sleep(20000);\nawait driver.wait(until.elementLocated(By.xpath('//span[text()=\"Stablecoin Balance\"]')), 8000);\nawait driver.sleep(500);\nawait driver.quit();",
+              "err": {},
+              "uuid": "13f25136-bb18-4ef1-aa0a-66c73798428f",
+              "parentUUID": "aa134791-0c96-4bda-8bab-ff19dd6480b4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d70f73dc-fcf1-4c1f-87b0-6d8f96b4f109",
+            "6ff69017-23f5-42ac-af6b-6a2608e50223",
+            "13f25136-bb18-4ef1-aa0a-66c73798428f"
+          ],
+          "failures": [],
+          "pending": [
+            "2c8822cd-d787-4cfa-937d-60c67e6e527d"
+          ],
+          "skipped": [],
+          "duration": 118349,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 200000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.8.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "C:/Users/deast/Work/Upbond/upbond_DJ/e2e_mimaruu/report_result/kurogo_existing_user_prod"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
